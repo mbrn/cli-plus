@@ -1,0 +1,19 @@
+{
+  "name": "cli-plus",
+  "version": "1.0.0",
+  "description": "A console application that contains a lof of features to help developer",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbrn/cli-plus.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mbrn/cli-plus/issues"
+  },
+  "homepage": "https://github.com/mbrn/cli-plus#readme"
+}
