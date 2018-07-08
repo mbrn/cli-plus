@@ -3,7 +3,9 @@
   "version": "1.1.1",
   "description": "A console application that contains a lot of features to help developers",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "lint": "eslint index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mbrn/cli-plus.git"
@@ -25,5 +27,16 @@
     "google-translate-api": "^2.3.0",
     "lodash": "^4.17.10",
     "open": "0.0.5"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.5",
+    "eslint": "^5.0.1",
+    "eslint-config-defaults": "^9.0.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-react": "^7.10.0",
+    "eslint-plugin-standard": "^3.1.0"
   }
 }
