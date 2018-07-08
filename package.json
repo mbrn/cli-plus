@@ -13,7 +13,10 @@
   "bin": {
     "x": "index.js"
   },
-  "keywords": [],
+  "keywords": [
+    "cli", 
+    "command line"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
