@@ -25,4 +25,3 @@ Every command starts with "x " prefix.
 ### trx
     $ x trx car
     $ x trx araba -l tr-en  # translate araba from Turkish to English (default translation en-tr)
-    
