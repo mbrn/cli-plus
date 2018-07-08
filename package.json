@@ -1,6 +1,6 @@
 {
   "name": "cli-plus",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A console application that contains a lot of features to help developers",
   "main": "index.js",
   "scripts": {},
