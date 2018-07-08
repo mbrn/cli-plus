@@ -2,11 +2,17 @@
 
 const program = require('commander');
 const packageJson = require('./package.json');
+const crp = require('./src/commands/crp');
 const go = require('./src/commands/go');
 const src = require('./src/commands/src');
 const trx = require('./src/commands/trx');
 
 program.version(packageJson.version);
+
+program
+  .command('crp')
+  .option('-c, --count <n>', 'result count', 10, parseInt)
+  .action(function(options) { crp(options) });
 
 program.command('go <address>').action(function(address) { go(address) });
 

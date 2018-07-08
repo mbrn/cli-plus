@@ -15,6 +15,10 @@ A console application that contains a lof of features to help developer
 Every command starts with "x " prefix. 
 
 ### go
+    $ x crp         # lists top 10 crypto currency prices
+    $ x crp -c 5    # lists top 5 crypto currency prices
+
+### go
     $ x go medium.com/@mehmet.baran
    
 ### src
