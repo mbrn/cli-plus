@@ -1,6 +1,6 @@
 # cli-plus
 
-[![Build Status](https://api.travis-ci.org/tj/cli-plus.js.svg?branch=master)](http://travis-ci.org/tj/cli-plus.js)
+[![Build Status](https://travis-ci.org/mbrn/cli-plus.svg?branch=master)](https://travis-ci.org/mbrn/cli-plus)
 [![NPM Version](http://img.shields.io/npm/v/cli-plus.svg?style=flat)](https://www.npmjs.org/package/cli-plus)
 [![NPM Downloads](https://img.shields.io/npm/dm/cli-plus.svg?style=flat)](https://npmcharts.com/compare/cli-plus?minimal=true)
 [![Install Size](https://packagephobia.now.sh/badge?p=cli-plus)](https://packagephobia.now.sh/result?p=cli-plus)
