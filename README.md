@@ -7,7 +7,6 @@
 A console application that contains a lof of features to help developer
 
 ## Installation
-
     $ npm install cli-plus --save -g
 
 ## Commands
