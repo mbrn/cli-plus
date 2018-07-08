@@ -15,13 +15,16 @@ A console application that contains a lof of features to help developer
 Every command starts with "x " prefix. 
 
 ### go
-   $ x go medium.com/@mehmet.baran
+    $ x go medium.com/@mehmet.baran
    
 ### src
-   $ x src news
-   $ x src "search something on google (results will be on console)"   
-   $ x src "search somethinh on google -c 10 # result count 10 (default 5)
-   $ x src "search somethinh on google -c 10 -s 10 # result count 10 and skip first 10 result   
-   $ x src "search something on google (results will be on browser)" -b
+    $ x src news
+    $ x src "search something on google"                # results will be on console   
+    $ x src "search somethinh on google" -c 10          # result count 10 (default 5)
+    $ x src "search somethinh on google" -c 10 -s 10    # result count 10 and skip first 10 result   
+    $ x src "search something on google" -b             # results will be on browser 
    
 ### trx
+    $ x trx car
+    $ x trx araba -l tr-en  # translate araba from Turkish to English (default translation en-tr)
+    
