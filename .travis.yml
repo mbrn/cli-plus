@@ -10,3 +10,11 @@ cache:
 script:
 - npm run lint
 - npm test
+before_install:
+  - npm i -g makeshift && makeshift -s @mbrn -r registry.npmjs.org
+deploy:
+  provider: npm
+  email: "mehmetbaran@mehmetbaran.net"
+  api_key: "$NPM_TOKEN"
+  on:
+    tags: true
