@@ -10,7 +10,6 @@ A console application that contains a lof of features to help developer
     $ npm install cli-plus --save -g
 
 ## Commands
-
 Every command starts with "x " prefix. 
 
 ### go
