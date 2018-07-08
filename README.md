@@ -10,10 +10,18 @@ A console application that contains a lof of features to help developer
 
     $ npm install cli-plus --save -g
 
-# Commands
+## Commands
 
-## go
-    
+Every command starts with "x " prefix. 
+
+### go
+   $ x go medium.com/@mehmet.baran
+   
 ### src
-
-## trx
+   $ x src news
+   $ x src "search something on google (results will be on console)"   
+   $ x src "search somethinh on google -c 10 # result count 10 (default 5)
+   $ x src "search somethinh on google -c 10 -s 10 # result count 10 and skip first 10 result   
+   $ x src "search something on google (results will be on browser)" -b
+   
+### trx
