@@ -2,12 +2,16 @@
 
 const program = require('commander');
 const packageJson = require('./package.json');
+const exc = require('./src/commands/exc');
 const crp = require('./src/commands/crp');
 const go = require('./src/commands/go');
 const src = require('./src/commands/src');
 const trx = require('./src/commands/trx');
 
 program.version(packageJson.version);
+
+program
+  .command('exc').action(function(options) { exc(options) });
 
 program
   .command('crp')
