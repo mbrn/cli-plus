@@ -14,6 +14,9 @@ A console application that contains a lof of features to help developer
 ## Commands
 Every command starts with "x " prefix. 
 
+### exc
+    $ x exc         # lists USD, EUR, GBP, GOLD prices as Turkish Lira    
+
 ### crp
     $ x crp         # lists top 10 crypto currency prices
     $ x crp -c 5    # lists top 5 crypto currency prices
