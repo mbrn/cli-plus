@@ -1,11 +1,10 @@
 
-const open = require("open");
-const _ = require("lodash");
-const dataManager = require('../../util/LocalDataManager');
+const open = require('open');
+const _ = require('lodash');
 
-module.exports = function (address) {
-  if(_.startsWith(address, "http") == false) {
-    address = "http://" + address
+module.exports = function(address) {
+  if (_.startsWith(address, 'http') === false) {
+    address = 'http://' + address;
   }
   open(address);
-}
+};
