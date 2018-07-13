@@ -6,6 +6,7 @@ const exc = require('./src/commands/exc');
 const crp = require('./src/commands/crp');
 const go = require('./src/commands/go');
 const src = require('./src/commands/src');
+const stc = require('./src/commands/stc');
 const trx = require('./src/commands/trx');
 
 program.version(packageJson.version);
@@ -26,6 +27,10 @@ program
   .option('-c, --count <n>', 'result count', 5, parseInt)
   .option('-s, --skip <n>', 'result count', 0, parseInt)
   .action(function(term, options) { src(term, options) });
+
+program
+  .command('stc [command] [stock]')
+  .action(function(command, stock) { stc(command, stock) });
 
 program
   .command('trx <term>')
