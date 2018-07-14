@@ -15,9 +15,8 @@ program
   .command('exc').action(function(options) { exc(options) });
 
 program
-  .command('crp')
-  .option('-c, --count <n>', 'result count', 10, parseInt)
-  .action(function(options) { crp(options) });
+  .command('crp [command] [coin] [count]')
+  .action(function(command, coin, count) { crp(command, coin, count) });
 
 program.command('go <address>').action(function(address) { go(address) });
 
