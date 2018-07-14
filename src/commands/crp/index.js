@@ -23,9 +23,12 @@ var commands = {
       console.log('No coin added. Please type ' + chalk.green('x crp add COIN_SYMBOL') + ' to add new coin to list');
       return;
     }
+    console.log();
 
     var usdTry = getUsdTryPrice();
     usdTry = (usdTry.selling + usdTry.buying) / 2;
+    console.log('USD/TRY: ' + usdTry);
+    console.log();
 
     getCryptoData(coinList.map(e => { return e.coin }), data => {
       console.log('RANK  CUR.     USD        BTC          TRY    C.RATE   COUNT   USD    BTC    TRY ');
