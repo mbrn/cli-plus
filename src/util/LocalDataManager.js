@@ -1,5 +1,7 @@
+var process = require('process');
+var path = require('path');
 var LocalStorage = require('node-localstorage').LocalStorage;
-var localStorage = new LocalStorage('./scratch');
+var localStorage = new LocalStorage(path.join(process.argv[1], '../scratch'));
 
 module.exports = {
   set: function(key, value) {
