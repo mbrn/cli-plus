@@ -61,7 +61,7 @@ var commands = {
 
     stockList.sort().forEach(element => {
       console.log(element.stock + ' ' + element.count);
-    }); 
+    });
 
     console.log();
     console.log('Total ' + stockList.length + ' stocks listed');
@@ -74,7 +74,7 @@ var commands = {
     }
     count = count || 0;
     var stockList = dataManager.get(itemsKey) || [];
-    
+
     const indexOf = stockList.map(function(e) { return e.stock }).indexOf(stock);
     if (indexOf !== -1) {
       stockList.splice(indexOf, 1);

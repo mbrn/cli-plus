@@ -70,8 +70,8 @@ var commands = {
         _.padStart(Utility.moneyFormat(usdTotal), 7, ' ') + '  ' +
         _.padStart(Utility.moneyFormat(btcTotal, 2), 5, ' ') + '  ' +
         _.padStart(Utility.moneyFormat(tryTotal), 7, ' ');
-        console.log('====  =====  =========  ============  ==========  =======  =====  =======  =====  =======');
-        console.log(totalLine);
+      console.log('====  =====  =========  ============  ==========  =======  =====  =======  =====  =======');
+      console.log(totalLine);
     });
   },
 
