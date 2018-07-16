@@ -2,6 +2,7 @@ const chalk = require('chalk');
 const https = require('https');
 const _ = require('lodash');
 const dataManager = require('../../util/LocalDataManager');
+const Utility = require('../../util/Utility');
 
 module.exports = function(command, coin, count) {
   if (!command) {
@@ -31,8 +32,8 @@ var commands = {
     console.log();
 
     getCryptoData(coinList.map(e => { return e.coin }), data => {
-      console.log('RANK  CUR.     USD        BTC          TRY    C.RATE   COUNT   USD    BTC    TRY ');
-      console.log('====  =====  =======  ============  ========  =======  =====  =====  =====  ======');
+      console.log('RANK  CUR.      USD         BTC          TRY      C.RATE   COUNT    USD     BTC     TRY ');
+      console.log('====  =====  =========  ============  ==========  =======  =====  =======  =====  =======');
 
       var usdTotal = 0;
       var btcTotal = 0;
@@ -41,8 +42,8 @@ var commands = {
       data.forEach(coin => {
         const f = coin.quotes.USD.percent_change_24h > 0 ? chalk.green : chalk.red;
         const count = coinList.find(e => { return e.coin === coin.symbol }).count;
-        const usdPrice = Math.round(count * coin.quotes.USD.price);
-        const btcPrice = Math.round(count * coin.quotes.BTC.price * 100) / 100;
+        const usdPrice = count * coin.quotes.USD.price;
+        const btcPrice = count * coin.quotes.BTC.price;
         const tryPrice = Math.round(count * coin.quotes.USD.price * usdTry);
 
         usdTotal += usdPrice;
@@ -52,25 +53,25 @@ var commands = {
         var line =
           _.padStart(coin.rank, 4, ' ') + '  ' +
           _.padEnd(coin.symbol, 6, ' ') +
-          _.padStart(Math.round(coin.quotes.USD.price * 100) / 100, 8, ' ') + ' ' +
+          _.padStart(Utility.moneyFormat(coin.quotes.USD.price, 2), 10, ' ') + ' ' +
           _.padStart(coin.quotes.BTC.price, 13, ' ') + '  ' +
-          _.padStart(Math.round(coin.quotes.USD.price * usdTry * 100) / 100, 8, ' ') + ' ' +
+          _.padStart(Utility.moneyFormat(coin.quotes.USD.price * usdTry, 2), 10, ' ') + ' ' +
           _.padStart('%' + coin.quotes.USD.percent_change_24h, 8, ' ') + ' ' +
           _.padStart(count, 6, ' ') + '  ' +
-          _.padStart(usdPrice, 5, ' ') + '  ' +
-          _.padStart(btcPrice, 5, ' ') + '  ' +
-          _.padStart(tryPrice, 6, ' ');
+          _.padStart(Utility.moneyFormat(usdPrice), 7, ' ') + '  ' +
+          _.padStart(Utility.moneyFormat(btcPrice, 2), 5, ' ') + '  ' +
+          _.padStart(Utility.moneyFormat(tryPrice), 7, ' ');
 
         console.log(f(line));
       });
 
       const totalLine =
-        'TOTAL                                                         ' +
-        _.padStart(usdTotal, 5, ' ') + '  ' +
-        _.padStart(Math.round(btcTotal * 100) / 100, 5, ' ') + '  ' +
-        _.padStart(tryTotal, 6, ' ');
-      console.log('====  =====  =======  ============  ========  =======  =====  =====  =====  ======');
-      console.log(totalLine);
+        'TOTAL                                                             ' +
+        _.padStart(Utility.moneyFormat(usdTotal), 7, ' ') + '  ' +
+        _.padStart(Utility.moneyFormat(btcTotal, 2), 5, ' ') + '  ' +
+        _.padStart(Utility.moneyFormat(tryTotal), 7, ' ');
+        console.log('====  =====  =========  ============  ==========  =======  =====  =======  =====  =======');
+        console.log(totalLine);
     });
   },
 

@@ -28,8 +28,8 @@ program
   .action(function(term, options) { src(term, options) });
 
 program
-  .command('stc [command] [stock]')
-  .action(function(command, stock) { stc(command, stock) });
+  .command('stc [command] [stock] [count]')
+  .action(function(command, stock, count) { stc(command, stock, count) });
 
 program
   .command('trx <term>')
