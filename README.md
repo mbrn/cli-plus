@@ -9,7 +9,7 @@
 A console application that contains a lof of features to help developer
 
 ## Installation
-    $ npm install cli-plus --save -g
+    $ npm install cli-plus -g
 
 ## Commands
 Every command starts with "x " prefix. 
